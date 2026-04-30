@@ -14,3 +14,6 @@ Making some foolish things.
 ![HTML](https://img.shields.io/badge/HTML-22c55e?style=for-the-badge&logo=HTML&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-22c55e?style=for-the-badge&logo=JavaScript&logoColor=white)
 ![Python](https://img.shields.io/badge/Python-eab308?style=for-the-badge&logo=Python&logoColor=white)
+
+## 💥 Still Learning
+![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=cchengoran525&layout=compact&stats_format=bytes)
