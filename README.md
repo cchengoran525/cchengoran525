@@ -1,6 +1,6 @@
 # Hi there 👋 I'm Cheng Chen
 
-Undergraduate @ SUSTech, China  
+Freshman @ SUSTech, China  
 Automation / Control Engineering · Embedded Systems · Creative Technology · HCI / HRI
 
 ---
