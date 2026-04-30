@@ -2,7 +2,7 @@
 
 A Freshman from SUSTech, China
 
-Making some foolish things.
+Trying to do some interesting things
 
 ## 🔗 Connect with me
 [![Twitter](https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=Twitter&logoColor=white)](https://x.com/cchengoran)
