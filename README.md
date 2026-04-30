@@ -11,16 +11,6 @@ I build things that sit at the intersection of hardware, AI, and art. Currently 
 
 ---
 
-## 🚀 Active Projects
-
-| Project | Description | Tags |
-|--------|-------------|------|
-| 🤖 **HappyMac** | ESP32-C3 desktop companion with mmWave radar, TinyML presence detection, and a pixel-art face | `Embedded` `TinyML` `ESP32` |
-| 🎭 **Native 2D VTuber** | Discrete-driven system where full-frame switching *is* the aesthetic — not a limitation to smooth over | `CV` `PyTorch` `Research` |
-| 🖥️ **Dorm Cluster** | 4-node distributed setup: M1 Pro · RTX 5060 · Linux server · NAS — connected via Tailscale | `Distributed` `Networking` |
-
----
-
 ## 🔗 Connect with me
 
 [![Twitter](https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=Twitter&logoColor=white)](https://x.com/cchengoran)
@@ -41,6 +31,17 @@ I build things that sit at the intersection of hardware, AI, and art. Currently 
 
 ![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=cchengoran525&layout=compact&stats_format=bytes)
 
+---
+
+## 🚀 Active Projects
+
+| Project | Description | Tags |
+|--------|-------------|------|
+| 🤖 **HappyMac** | ESP32-C3 desktop companion with mmWave radar, TinyML presence detection, and a pixel-art face | `Embedded` `TinyML` `ESP32` |
+| 🎭 **Native 2D VTuber** | Discrete-driven system where full-frame switching *is* the aesthetic — not a limitation to smooth over | `CV` `PyTorch` `Research` |
+| 🖥️ **Dorm Cluster** | 4-node distributed setup: M1 Pro · RTX 5060 · Linux server · NAS — connected via Tailscale | `Distributed` `Networking` |
+
 ## 🐍 My Snake (or to say, Python)
 ![snake](https://raw.githubusercontent.com/cchengoran525/cchengoran525/output/github-contribution-grid-snake.svg#gh-light-mode-only)
 ![snake](https://raw.githubusercontent.com/cchengoran525/cchengoran525/output/github-contribution-grid-snake-dark.svg#gh-dark-mode-only)
+
