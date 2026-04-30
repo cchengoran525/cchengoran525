@@ -40,3 +40,6 @@ I build things that sit at the intersection of hardware, AI, and art. Currently 
 ## 💥 Still Learning
 
 ![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=cchengoran525&layout=compact&stats_format=bytes)
+
+![snake](https://raw.githubusercontent.com/cchengoran525/cchengoran525/output/github-contribution-grid-snake.svg#gh-light-mode-only)
+![snake](https://raw.githubusercontent.com/cchengoran525/cchengoran525/output/github-contribution-grid-snake-dark.svg#gh-dark-mode-only)
