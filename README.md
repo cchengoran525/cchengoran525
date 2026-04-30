@@ -31,11 +31,11 @@ I build things that sit at the intersection of hardware, AI, and art. Currently 
 
 ## 💻 Tech Stack
 
-![C/C++](https://img.shields.io/badge/C/C++-22c55e?style=for-the-badge&logo=C/C++&logoColor=white)
-![Python](https://img.shields.io/badge/Python-22c55e?style=for-the-badge&logo=Python&logoColor=white)
+![C/C++](https://img.shields.io/badge/C/C++-eab308?style=for-the-badge&logo=C/C++&logoColor=white)
+![Python](https://img.shields.io/badge/Python-eab308?style=for-the-badge&logo=Python&logoColor=white)
 ![HTML](https://img.shields.io/badge/HTML-22c55e?style=for-the-badge&logo=HTML&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-22c55e?style=for-the-badge&logo=JavaScript&logoColor=white)
-![PyTorch](https://img.shields.io/badge/PyTorch-eab308?style=for-the-badge&logo=PyTorch&logoColor=white)
+![PyTorch](https://img.shields.io/badge/PyTorch-22c55e?style=for-the-badge&logo=PyTorch&logoColor=white)
 
 ## 💥 Still Learning
 
