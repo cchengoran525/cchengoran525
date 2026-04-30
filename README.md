@@ -1,16 +1,16 @@
-## Hi there 👋
+# Hi there 👋 I'm Cheng Chen
 
-<!--
-**cchengoran525/cchengoran525** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+A Freshman from SUSTech, China
 
-Here are some ideas to get you started:
+Making some foolish things.
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+## 🔗 Connect with me
+[![Twitter](https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=Twitter&logoColor=white)](https://x.com/cchengoran)
+[![YouTube](https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=YouTube&logoColor=white)](https://youtube.com/@chenchengoran)
+[![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=Gmail&logoColor=white)](mailto:cchengoran@gmail.com)
+
+## 💻 Tech Stack
+![C/C++](https://img.shields.io/badge/C/C++-22c55e?style=for-the-badge&logo=C/C++&logoColor=white)
+![HTML](https://img.shields.io/badge/HTML-22c55e?style=for-the-badge&logo=HTML&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-22c55e?style=for-the-badge&logo=JavaScript&logoColor=white)
+![Python](https://img.shields.io/badge/Python-eab308?style=for-the-badge&logo=Python&logoColor=white)
