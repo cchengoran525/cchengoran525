@@ -7,7 +7,7 @@ Automation / Control Engineering · Embedded Systems · Creative Technology · H
 
 ## 🧠 About me
 
-I build things that sit at the intersection of hardware, AI, and art. Currently obsessed with TinyML on microcontrollers, distributed computing across dorm devices, and the philosophy of why 2D animation should embrace discreteness rather than fight it.
+I build things that sit at the intersection of hardware, AI, and art. Currently obsessed with TinyML on microcontrollers, distributed computing across dorm devices, and the philosophy of why 2D animation should embrace discreteness rather than fight it. Also exploring HRI — specifically how a robot companion can make itself *invisible* to the person it's following.
 
 ---
 
@@ -40,6 +40,7 @@ I build things that sit at the intersection of hardware, AI, and art. Currently 
 | 🤖 **HappyMac** | ESP32-C3 desktop companion with mmWave radar, TinyML presence detection, and a pixel-art face | `Embedded` `TinyML` `ESP32` |
 | 🎭 **Native 2D VTuber** | Discrete-driven system where full-frame switching *is* the aesthetic — not a limitation to smooth over | `CV` `PyTorch` `Research` |
 | 🖥️ **Dorm Cluster** | 4-node distributed setup: M1 Pro · RTX 5060 · Linux server · NAS — connected via Tailscale | `Distributed` `Networking` |
+| 🛒 **逛街搭子** | Shopping companion robot — predicts separation before it happens, waits somewhere findable, reunites without being asked | `HRI` `MPC` `Embedded` |
 
 ## 🐍 My Snake (or to say, Python)
 ![snake](https://raw.githubusercontent.com/cchengoran525/cchengoran525/output/github-contribution-grid-snake.svg#gh-light-mode-only)
