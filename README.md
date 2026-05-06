@@ -29,7 +29,7 @@ I build things that sit at the intersection of hardware, AI, and art. Currently 
 
 ## 💥 Still Learning
 
-![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=cchengoran525&layout=compact&stats_format=bytes)
+![GitHub Metrics](github-metrics.svg)
 
 ---
 
