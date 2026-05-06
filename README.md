@@ -30,9 +30,9 @@ I build things that sit at the intersection of hardware, AI, and art. Currently 
 ## 💥 Still Learning
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="metrics.dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="metrics.light.svg">
-  <img alt="GitHub Metrics" src="metrics.light.svg">
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/cchengoran525/cchengoran525/output/metrics.dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/cchengoran525/cchengoran525/output/metrics.light.svg">
+  <img alt="GitHub Metrics" src="https://raw.githubusercontent.com/cchengoran525/cchengoran525/output/metrics.light.svg">
 </picture>
 
 ---
