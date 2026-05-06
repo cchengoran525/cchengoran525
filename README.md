@@ -29,7 +29,11 @@ I build things that sit at the intersection of hardware, AI, and art. Currently 
 
 ## 💥 Still Learning
 
-![GitHub Metrics](github-metrics.svg)
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="metrics.dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="metrics.light.svg">
+  <img alt="GitHub Metrics" src="metrics.light.svg">
+</picture>
 
 ---
 
