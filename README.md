@@ -47,6 +47,5 @@ I build things that sit at the intersection of hardware, AI, and art. Currently 
 | 🛒 **Shadow Carrier** | Shopping companion robot — predicts separation before it happens, waits somewhere findable, reunites without being asked | `HRI` `MPC` `Embedded` |
 
 ## 🐍 My Snake (or to say, Python)
-![snake](https://raw.githubusercontent.com/cchengoran525/cchengoran525/output/github-contribution-grid-snake.svg#gh-light-mode-only)
-![snake](https://raw.githubusercontent.com/cchengoran525/cchengoran525/output/github-contribution-grid-snake-dark.svg#gh-dark-mode-only)
-
+![snake](https://raw.githubusercontent.com/cchengoran525/cchengoran525/output-snake/github-contribution-grid-snake.svg#gh-light-mode-only)
+![snake](https://raw.githubusercontent.com/cchengoran525/cchengoran525/output-snake/github-contribution-grid-snake-dark.svg#gh-dark-mode-only)
