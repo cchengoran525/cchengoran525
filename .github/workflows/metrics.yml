@@ -9,12 +9,15 @@ permissions:
 jobs:
   github-metrics:
     runs-on: ubuntu-latest
+    env:
+      # 未配置 METRICS_TOKEN 时使用 GITHUB_TOKEN（仅可访问公开数据）
+      METRICS_TOKEN: ${{ secrets.METRICS_TOKEN || github.token }}
     steps:
       # --- 生成白天模式图片 ---
       - name: Light mode
         uses: lowlighter/metrics@latest
         with:
-          token: ${{ secrets.METRICS_TOKEN || github.token }}
+          token: ${{ env.METRICS_TOKEN }}
           user: cchengoran525
           filename: metrics.light.svg
           config_theme: github-light
@@ -34,7 +37,7 @@ jobs:
       - name: Dark mode
         uses: lowlighter/metrics@latest
         with:
-          token: ${{ secrets.METRICS_TOKEN || github.token }}
+          token: ${{ env.METRICS_TOKEN }}
           user: cchengoran525
           filename: metrics.dark.svg
           config_theme: github-dark
