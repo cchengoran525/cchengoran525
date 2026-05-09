@@ -10,7 +10,7 @@ jobs:
   github-metrics:
     runs-on: ubuntu-latest
     env:
-      # 未配置 METRICS_TOKEN 时使用 GITHUB_TOKEN（仅可访问公开数据）
+      # 未配置 METRICS_TOKEN 时使用 GITHUB_TOKEN (仅可访问公开数据)
       METRICS_TOKEN: ${{ secrets.METRICS_TOKEN || github.token }}
     steps:
       # --- 生成白天模式图片 ---
