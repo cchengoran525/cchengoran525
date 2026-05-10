@@ -12,6 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       ASSET_PUBLISH_TOKEN: ${{ secrets.ASSET_PUBLISH_TOKEN || github.token }}
+      ASSET_VERIFY_MIN_SIZE: 1000
       ASSET_VERIFY_SLEEP: 10
       ASSET_VERIFY_RETRIES: 5
       ASSET_VERIFY_RETRY_DELAY: 10
@@ -33,22 +34,6 @@ jobs:
 
       - name: Verify output assets
         run: |
-          set -euo pipefail
-          min_size=1000
-          urls=(
-            "https://raw.githubusercontent.com/cchengoran525/cchengoran525/output/github-contribution-grid-snake.svg"
+          bash .github/scripts/verify-assets.sh \
+            "https://raw.githubusercontent.com/cchengoran525/cchengoran525/output/github-contribution-grid-snake.svg" \
             "https://raw.githubusercontent.com/cchengoran525/cchengoran525/output/github-contribution-grid-snake-dark.svg"
-          )
-          echo "Waiting for assets to propagate..."
-          sleep "$ASSET_VERIFY_SLEEP"
-          for url in "${urls[@]}"; do
-            echo "Checking $url"
-            tmpfile=$(mktemp)
-            curl -L --retry "$ASSET_VERIFY_RETRIES" --retry-all-errors --retry-delay "$ASSET_VERIFY_RETRY_DELAY" -o "$tmpfile" "$url"
-            size=$(wc -c < "$tmpfile")
-            rm -f "$tmpfile"
-            if [ "$size" -lt "$min_size" ]; then
-              echo "Asset too small: $url ($size bytes)"
-              exit 1
-            fi
-          done
