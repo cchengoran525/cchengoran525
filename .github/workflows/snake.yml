@@ -36,6 +36,8 @@ jobs:
             "https://raw.githubusercontent.com/cchengoran525/cchengoran525/output/github-contribution-grid-snake.svg"
             "https://raw.githubusercontent.com/cchengoran525/cchengoran525/output/github-contribution-grid-snake-dark.svg"
           )
+          echo "Waiting for assets to propagate..."
+          sleep 10
           for url in "${urls[@]}"; do
             echo "Checking $url"
             tmpfile=$(mktemp)
