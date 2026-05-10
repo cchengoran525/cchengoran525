@@ -38,8 +38,10 @@ jobs:
           )
           for url in "${urls[@]}"; do
             echo "Checking $url"
-            curl -L --retry 5 --retry-all-errors --retry-delay 10 -o /tmp/asset.svg "$url"
-            size=$(wc -c < /tmp/asset.svg)
+            tmpfile=$(mktemp)
+            curl -L --retry 5 --retry-all-errors --retry-delay 10 -o "$tmpfile" "$url"
+            size=$(wc -c < "$tmpfile")
+            rm -f "$tmpfile"
             if [ "$size" -lt "$min_size" ]; then
               echo "Asset too small: $url ($size bytes)"
               exit 1
