@@ -35,7 +35,7 @@ I build things that sit at the intersection of hardware, AI, and art. Currently 
   <img alt="GitHub Metrics" src="https://cchengoran525.github.io/cchengoran525/metrics.light.svg?v=1">
 </picture>
 
-> Assets are published to the `output` branch. For best reliability, set the `ASSET_PUBLISH_TOKEN` secret (fine‑grained PAT with `contents: write`) and enable GitHub Pages with source `output` (or GitHub Actions deployment).
+> Assets are published to the `output` branch. For best reliability, set the `ASSET_PUBLISH_TOKEN` secret (fine‑grained PAT; requires `contents: write`) and enable GitHub Pages with source `output` (or GitHub Actions deployment).
 
 ---
 
