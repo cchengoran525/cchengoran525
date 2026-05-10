@@ -1,0 +1,72 @@
+name: Asset Health Check
+
+on:
+  schedule:
+    - cron: "20 */6 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check assets
+        id: check
+        run: |
+          set -euo pipefail
+          min_size=1000
+          urls=(
+            "https://raw.githubusercontent.com/cchengoran525/cchengoran525/output/metrics.light.svg"
+            "https://raw.githubusercontent.com/cchengoran525/cchengoran525/output/metrics.dark.svg"
+            "https://raw.githubusercontent.com/cchengoran525/cchengoran525/output/github-contribution-grid-snake.svg"
+            "https://raw.githubusercontent.com/cchengoran525/cchengoran525/output/github-contribution-grid-snake-dark.svg"
+            "https://cchengoran525.github.io/cchengoran525/metrics.light.svg"
+            "https://cchengoran525.github.io/cchengoran525/metrics.dark.svg"
+            "https://cchengoran525.github.io/cchengoran525/github-contribution-grid-snake.svg"
+            "https://cchengoran525.github.io/cchengoran525/github-contribution-grid-snake-dark.svg"
+            "https://cdn.jsdelivr.net/gh/cchengoran525/cchengoran525@output/metrics.light.svg"
+            "https://cdn.jsdelivr.net/gh/cchengoran525/cchengoran525@output/metrics.dark.svg"
+            "https://cdn.jsdelivr.net/gh/cchengoran525/cchengoran525@output/github-contribution-grid-snake.svg"
+            "https://cdn.jsdelivr.net/gh/cchengoran525/cchengoran525@output/github-contribution-grid-snake-dark.svg"
+          )
+          failures=0
+          report="## Asset health check (UTC $(date -u '+%Y-%m-%d %H:%M'))"
+          for url in "${urls[@]}"; do
+            echo "Checking $url"
+            result=$(curl -L --retry 3 --retry-all-errors --retry-delay 5 -o /tmp/asset -w "%{http_code} %{size_download}" -s "$url" || true)
+            code=$(echo "$result" | awk '{print $1}')
+            size=$(echo "$result" | awk '{print $2}')
+            if [ "$code" != "200" ] || [ "$size" -lt "$min_size" ]; then
+              failures=$((failures+1))
+              report="${report}\n- ❌ ${url} -> ${code} (${size} bytes)"
+            else
+              report="${report}\n- ✅ ${url} -> ${code} (${size} bytes)"
+            fi
+          done
+          printf "%b\n" "$report" | tee health-report.md
+          printf "%b\n" "$report" >> "$GITHUB_STEP_SUMMARY"
+          echo "failures=$failures" >> "$GITHUB_OUTPUT"
+
+      - name: Open or update issue
+        if: steps.check.outputs.failures != '0'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const body = fs.readFileSync('health-report.md', 'utf8');
+            const { owner, repo } = context.repo;
+            const title = 'Asset health check failed';
+            const { data: issues } = await github.rest.issues.listForRepo({ owner, repo, state: 'open' });
+            const existing = issues.find(issue => issue.title === title);
+            if (existing) {
+              await github.rest.issues.createComment({ owner, repo, issue_number: existing.number, body });
+            } else {
+              await github.rest.issues.create({ owner, repo, title, body });
+            }
+
+      - name: Fail workflow if assets are unhealthy
+        if: steps.check.outputs.failures != '0'
+        run: exit 1

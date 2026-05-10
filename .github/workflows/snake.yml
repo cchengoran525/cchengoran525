@@ -10,6 +10,8 @@ permissions:
 jobs:
   generate:
     runs-on: ubuntu-latest
+    env:
+      ASSET_PUBLISH_TOKEN: ${{ secrets.ASSET_PUBLISH_TOKEN || github.token }}
     steps:
       - uses: Platane/snk@v3
         with:
@@ -24,4 +26,22 @@ jobs:
           build_dir: dist
           keep_files: true
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ env.ASSET_PUBLISH_TOKEN }}
+
+      - name: Verify output assets
+        run: |
+          set -euo pipefail
+          min_size=1000
+          urls=(
+            "https://raw.githubusercontent.com/cchengoran525/cchengoran525/output/github-contribution-grid-snake.svg"
+            "https://raw.githubusercontent.com/cchengoran525/cchengoran525/output/github-contribution-grid-snake-dark.svg"
+          )
+          for url in "${urls[@]}"; do
+            echo "Checking $url"
+            curl -L --retry 5 --retry-all-errors --retry-delay 10 -o /tmp/asset.svg "$url"
+            size=$(wc -c < /tmp/asset.svg)
+            if [ "$size" -lt "$min_size" ]; then
+              echo "Asset too small: $url ($size bytes)"
+              exit 1
+            fi
+          done
