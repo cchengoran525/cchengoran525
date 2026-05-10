@@ -37,7 +37,7 @@ jobs:
           for url in "${urls[@]}"; do
             echo "Checking $url"
             tmpfile=$(mktemp)
-            result=$(curl -L --retry 3 --retry-all-errors --retry-delay 5 -o "$tmpfile" -w "%{http_code} %{size_download}" -s "$url" || true)
+            result=$(curl -L --retry 5 --retry-all-errors --retry-delay 10 -o "$tmpfile" -w "%{http_code} %{size_download}" -s "$url" || true)
             code=$(echo "$result" | awk '{print $1}')
             size=$(echo "$result" | awk '{print $2}')
             rm -f "$tmpfile"
