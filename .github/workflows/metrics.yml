@@ -12,6 +12,11 @@ jobs:
     env:
       # 未配置 METRICS_TOKEN 时使用 GITHUB_TOKEN (仅可访问公开数据)
       METRICS_TOKEN: ${{ secrets.METRICS_TOKEN || github.token }}
+      ASSET_PUBLISH_TOKEN: ${{ secrets.ASSET_PUBLISH_TOKEN || github.token }}
+      ASSET_VERIFY_MIN_SIZE: 1000
+      ASSET_VERIFY_SLEEP: 10
+      ASSET_VERIFY_RETRIES: 5
+      ASSET_VERIFY_RETRY_DELAY: 10
     steps:
       # --- 生成白天模式图片 ---
       - name: Light mode
@@ -31,7 +36,7 @@ jobs:
           plugin_followup: yes
           plugin_followup_sections: user # 专注于你个人的 PR 和 Issue 状态
           committer_branch: output  # 关键：把图片存到 output 分支
-          committer_token: ${{ github.token }}
+          committer_token: ${{ env.ASSET_PUBLISH_TOKEN }}
 
       # --- 生成黑夜模式图片 ---
       - name: Dark mode
@@ -49,4 +54,10 @@ jobs:
           plugin_followup: yes
           plugin_followup_sections: user
           committer_branch: output  # 关键：把图片存到 output 分支
-          committer_token: ${{ github.token }}
+          committer_token: ${{ env.ASSET_PUBLISH_TOKEN }}
+
+      - name: Verify output assets
+        run: |
+          bash .github/scripts/verify-assets.sh \
+            "https://raw.githubusercontent.com/cchengoran525/cchengoran525/output/metrics.light.svg" \
+            "https://raw.githubusercontent.com/cchengoran525/cchengoran525/output/metrics.dark.svg"

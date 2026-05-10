@@ -10,6 +10,12 @@ permissions:
 jobs:
   generate:
     runs-on: ubuntu-latest
+    env:
+      ASSET_PUBLISH_TOKEN: ${{ secrets.ASSET_PUBLISH_TOKEN || github.token }}
+      ASSET_VERIFY_MIN_SIZE: 1000
+      ASSET_VERIFY_SLEEP: 10
+      ASSET_VERIFY_RETRIES: 5
+      ASSET_VERIFY_RETRY_DELAY: 10
     steps:
       - uses: Platane/snk@v3
         with:
@@ -24,4 +30,10 @@ jobs:
           build_dir: dist
           keep_files: true
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ env.ASSET_PUBLISH_TOKEN }}
+
+      - name: Verify output assets
+        run: |
+          bash .github/scripts/verify-assets.sh \
+            "https://raw.githubusercontent.com/cchengoran525/cchengoran525/output/github-contribution-grid-snake.svg" \
+            "https://raw.githubusercontent.com/cchengoran525/cchengoran525/output/github-contribution-grid-snake-dark.svg"
