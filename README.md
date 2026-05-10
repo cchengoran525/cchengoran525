@@ -30,8 +30,8 @@ I build things that sit at the intersection of hardware, AI, and art. Currently 
 ## 💥 Still Learning
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/cchengoran525/cchengoran525@output/metrics.dark.svg?v=1 1x, https://cchengoran525.github.io/cchengoran525/metrics.dark.svg?v=1 2x, https://raw.githubusercontent.com/cchengoran525/cchengoran525/output/metrics.dark.svg?v=1 3x">
-  <source media="(prefers-color-scheme: light)" srcset="https://cdn.jsdelivr.net/gh/cchengoran525/cchengoran525@output/metrics.light.svg?v=1 1x, https://cchengoran525.github.io/cchengoran525/metrics.light.svg?v=1 2x, https://raw.githubusercontent.com/cchengoran525/cchengoran525/output/metrics.light.svg?v=1 3x">
+  <source media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/cchengoran525/cchengoran525@output/metrics.dark.svg?v=1, https://cchengoran525.github.io/cchengoran525/metrics.dark.svg?v=1, https://raw.githubusercontent.com/cchengoran525/cchengoran525/output/metrics.dark.svg?v=1">
+  <source media="(prefers-color-scheme: light)" srcset="https://cdn.jsdelivr.net/gh/cchengoran525/cchengoran525@output/metrics.light.svg?v=1, https://cchengoran525.github.io/cchengoran525/metrics.light.svg?v=1, https://raw.githubusercontent.com/cchengoran525/cchengoran525/output/metrics.light.svg?v=1">
   <img alt="GitHub Metrics" src="https://cchengoran525.github.io/cchengoran525/metrics.light.svg?v=1">
 </picture>
 
@@ -50,7 +50,7 @@ I build things that sit at the intersection of hardware, AI, and art. Currently 
 
 ## 🐍 My Snake (or to say, Python)
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/cchengoran525/cchengoran525@output/github-contribution-grid-snake-dark.svg?v=1 1x, https://cchengoran525.github.io/cchengoran525/github-contribution-grid-snake-dark.svg?v=1 2x, https://raw.githubusercontent.com/cchengoran525/cchengoran525/output/github-contribution-grid-snake-dark.svg?v=1 3x">
-  <source media="(prefers-color-scheme: light)" srcset="https://cdn.jsdelivr.net/gh/cchengoran525/cchengoran525@output/github-contribution-grid-snake.svg?v=1 1x, https://cchengoran525.github.io/cchengoran525/github-contribution-grid-snake.svg?v=1 2x, https://raw.githubusercontent.com/cchengoran525/cchengoran525/output/github-contribution-grid-snake.svg?v=1 3x">
+  <source media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/cchengoran525/cchengoran525@output/github-contribution-grid-snake-dark.svg?v=1, https://cchengoran525.github.io/cchengoran525/github-contribution-grid-snake-dark.svg?v=1, https://raw.githubusercontent.com/cchengoran525/cchengoran525/output/github-contribution-grid-snake-dark.svg?v=1">
+  <source media="(prefers-color-scheme: light)" srcset="https://cdn.jsdelivr.net/gh/cchengoran525/cchengoran525@output/github-contribution-grid-snake.svg?v=1, https://cchengoran525.github.io/cchengoran525/github-contribution-grid-snake.svg?v=1, https://raw.githubusercontent.com/cchengoran525/cchengoran525/output/github-contribution-grid-snake.svg?v=1">
   <img alt="snake" src="https://cchengoran525.github.io/cchengoran525/github-contribution-grid-snake.svg?v=1">
 </picture>
