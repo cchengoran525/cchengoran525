@@ -18,6 +18,8 @@ jobs:
       ASSET_VERIFY_RETRIES: 5
       ASSET_VERIFY_RETRY_DELAY: 10
     steps:
+      - uses: actions/checkout@v4
+
       # --- 生成白天模式图片 ---
       - name: Light mode
         uses: lowlighter/metrics@latest
