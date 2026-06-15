@@ -30,13 +30,15 @@ jobs:
           config_theme: github-light
           config_timezone: Asia/Shanghai
           base: header
-          # 模块 1：语言详情（含字节大小和百分比）
+          # 保留语言统计
           plugin_languages: yes
           plugin_languages_details: bytes-size, percentage
           plugin_languages_limit: 8
-          # 模块 2：Issue 和 PR 的详细状态追踪
-          plugin_followup: yes
-          plugin_followup_sections: user # 专注于你个人的 PR 和 Issue 状态
+          # 改为更直接的仓库贡献/活动视图，避免 followup 看不到跨仓库 PR 的问题
+          plugin_activity: yes
+          plugin_activity_days: 14
+          plugin_activity_limit: 20
+          plugin_activity_filter: issue,pr,pr-opened,pr-merged,pr-reviewed
           committer_branch: output  # 关键：把图片存到 output 分支
           committer_token: ${{ env.ASSET_PUBLISH_TOKEN }}
 
@@ -53,8 +55,10 @@ jobs:
           plugin_languages: yes
           plugin_languages_details: bytes-size, percentage
           plugin_languages_limit: 8
-          plugin_followup: yes
-          plugin_followup_sections: user
+          plugin_activity: yes
+          plugin_activity_days: 14
+          plugin_activity_limit: 20
+          plugin_activity_filter: issue,pr,pr-opened,pr-merged,pr-reviewed
           committer_branch: output  # 关键：把图片存到 output 分支
           committer_token: ${{ env.ASSET_PUBLISH_TOKEN }}
 
