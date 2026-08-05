@@ -42,7 +42,7 @@ I build things that sit at the intersection of hardware, AI, and art. Currently 
 
 | Project | Description | Tags |
 |--------|-------------|------|
-| 🤖 **HappyMac** | ESP32-C3 desktop companion with mmWave radar, TinyML presence detection, and a pixel-art face | `Embedded` `TinyML` `ESP32` |
+| 🤖 **HappyMac** | ESP32-C3 desktop companion with mmWave radar, TinyML presence detection, and a pixel-art face | `Ubiquitous Computing` `Embedded` `TinyML` `ESP32` |
 | 🎭 **Native 2D VTuber** | Discrete-driven system where full-frame switching *is* the aesthetic — not a limitation to smooth over | `CV` `PyTorch` `Research` |
 | 🖥️ **Dorm Cluster** | 4-node distributed setup: M1 Pro · RTX 5060 · Linux server · NAS — connected via Tailscale | `Distributed` `Networking` |
 | 🛒 **Shadow Carrier** | Shopping companion robot — predicts separation before it happens, waits somewhere findable, reunites without being asked | `HRI` `MPC` `Embedded` |
